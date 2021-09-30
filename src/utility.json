@@ -37,7 +37,7 @@
             "id": 1
         },
         {
-            "name": "Marjoram and dolcelatte pizza",
+            "name": "Marjoram and Dolcelatte Pizza",
             "ingredients": [
                 "docelatte",
                 "marjoram",
@@ -55,7 +55,7 @@
             "id": 2
         },
         {
-            "name": "Honey and mango pizza",
+            "name": "Honey and Mango Pizza",
             "ingredients": [
                 "mango",
                 "honey",
@@ -73,7 +73,7 @@
             "id": 3
         },
         {
-            "name": "Chilli and apple pizza",
+            "name": "Chilli and Apple Pizza",
             "ingredients": [
                 "apple",
                 "chili",
@@ -91,7 +91,7 @@
             "id": 4
         },
         {
-            "name": "Egg and Pineapple pizza",
+            "name": "Egg and Pineapple Pizza",
             "ingredients": [
                 "Pineapple",
                 "egg",

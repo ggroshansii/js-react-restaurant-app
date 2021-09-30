@@ -7,7 +7,7 @@ function MenuItemList(props) {
     <div>
       {console.log(props.MenuUtility)}
       {props.MenuUtility.menu.map(element => {
-          return <MenuItem {...element}/>
+          return <MenuItem key={element.id} {...element}/>
       })}
     </div>
   );
