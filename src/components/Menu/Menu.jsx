@@ -1,10 +1,14 @@
 
 import './Menu.css';
+import MenuItemList from "../MenuItemList/MenuItemList"
+import OrderItemList from "../OrderItemList/OrderItemList"
 
 function Menu() {
   return (
     <div>
-    This is the Menu
+        This is Menu Page
+        <MenuItemList />
+        <OrderItemList />
     </div>
   );
 }
