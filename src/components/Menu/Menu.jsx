@@ -3,11 +3,11 @@ import './Menu.css';
 import MenuItemList from "../MenuItemList/MenuItemList"
 import OrderItemList from "../OrderItemList/OrderItemList"
 
-function Menu() {
+function Menu(props) {
   return (
     <div>
         This is Menu Page
-        <MenuItemList />
+        <MenuItemList MenuUtility={props.MenuUtility} />
         <OrderItemList />
     </div>
   );

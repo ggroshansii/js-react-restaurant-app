@@ -2,10 +2,13 @@
 import './MenuItemList.css';
 import MenuItem from '../MenuItem/MenuItem'
 
-function MenuItemList() {
+function MenuItemList(props) {
   return (
     <div>
-        <MenuItem />
+      {console.log(props.MenuUtility)}
+      {props.MenuUtility.menu.map(element => {
+          return <MenuItem {...element}/>
+      })}
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Logo from '../Logo/Logo'
 import NavBar from '../NavBar/NavBar'
 import Home from '../Home/Home'
 import Menu from '../Menu/Menu'
+import MenuUtility from '../../utility.json'
 import { useState } from 'react'
 
 function App() {
@@ -16,7 +17,7 @@ switch (navSelection) {
     html = <Home />;
     break;
   case 'menu':
-    html = <Menu />;
+    html = <Menu MenuUtility={MenuUtility}/>;
     break;
 }
 
