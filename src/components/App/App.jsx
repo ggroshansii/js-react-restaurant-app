@@ -19,6 +19,9 @@ switch (navSelection) {
   case 'menu':
     html = <Menu MenuUtility={MenuUtility}/>;
     break;
+  default:
+    console.log("ERROR IN SWITCH");
+    break;
 }
 
 function changeNavSelection(value) {

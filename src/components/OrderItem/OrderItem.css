@@ -1,0 +1,16 @@
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+}
+
+.order-item h3, .order-item p {
+    padding: 0;
+    margin: 0;
+}
+
+.order-item h3 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
