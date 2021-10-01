@@ -14,10 +14,8 @@
                 "cheese"
             ],
             "desc": "Freshly baked garlic bread smoothered with buffalo and hot sauce",
-            "dollars": 7,
-            "cents": 50,
-            "type": "appetizer",
-            "id": 0
+            "price": 750,
+            "type": "appetizer"
         },
         {
             "name": "Goat Cheesy Cinnamon Breadsticks",
@@ -33,10 +31,8 @@
                 "cheese"
             ],
             "desc": "Moist, indulgent breadsticks filled with goat cheese and topped with cinnamon",
-            "dollars": 6,
-            "cents": 75,
-            "type": "appetizer",
-            "id": 1
+            "price": 675,
+            "type": "appetizer"
         },
         {
             "name": "Tuna and thyme pizza",
@@ -52,10 +48,8 @@
                 "cheese"
             ],
             "desc": "Thin and crispy pizza topped with tuna and fresh thyme",
-            "dollars": 11,
-            "cents": 49,
-            "type": "pizza",
-            "id": 2
+            "price": 1149,
+            "type": "pizza"
         },
         {
             "name": "Honey and Mango Pizza",
@@ -71,10 +65,8 @@
                 "cheese"
             ],
             "desc": "Deep pan pizza topped with clear honey and dried mango",
-            "dollars": 11,
-            "cents": 99,
-            "type": "pizza",
-            "id": 3
+            "price": 1199,
+            "type": "pizza"
         },
         {
             "name": "Chilli and Apple Pizza",
@@ -90,10 +82,8 @@
                 "cheese"
             ],
             "desc": "Thin and crispy pizza topped with hot chilli and dessert apple",
-            "dollars": 10,
-            "cents": 79,
-            "type": "pizza",
-            "id": 4
+            "price": 1079,
+            "type": "pizza"
         },
         {
             "name": "Egg, Pepperoni and Pineapple pizza",
@@ -110,10 +100,8 @@
                 "cheese"
             ],
             "desc": "Crispy pizza topped with free range eggs, pepperoni and freshly cut pineapple",
-            "dollars": 10,
-            "cents": 50,
-            "type": "pizza",
-            "id": 5
+            "price": 1050,
+            "type": "pizza"
         },
         {
             "name": "Blueberry and Treacle Cookies",
@@ -128,9 +116,8 @@
                 "powdered sugar"
             ],
             "desc": "Crunchy cookies made with fresh blueberry and dark treacle",
-            "price": 4.99,
-            "type": "dessert",
-            "id": 6
+            "price": 499,
+            "type": "dessert"
         },
         {
             "name": "Raspberry Honey Oreo Cheesecake",
@@ -144,9 +131,8 @@
                 "sugar"
             ],
             "desc": "A velvety cheesecake layered with oreo chocolate and fresh raspberry",
-            "price": 5.99,
-            "type": "dessert",
-            "id": 7
+            "price": 599,
+            "type": "dessert"
         }
     ]
 }

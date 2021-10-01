@@ -1,5 +1,6 @@
 
 import './MenuItem.css';
+import formatCurrency from '../../FormatUtility';
 
 function MenuItem(props) {
 
@@ -9,7 +10,7 @@ function MenuItem(props) {
         <h3>{props.name}</h3>
         <h4>{props.desc}</h4>
         <p>{props.ingredients.join(", ")}</p>
-        <p>${props.price.toFixed(2)}</p>
+        <p>${formatCurrency(props.price)}</p>
         <button value={JSON.stringify(props)} onClick={(event) => props.addToOrder(event)}>Add to Order</button>
     </div>
   );

@@ -1,11 +1,12 @@
 
 import './OrderItem.css';
+import formatCurrency from '../../FormatUtility';
 
 function OrderItem(props) {
   return (
     <div className="order-item">
         <h3>{props.name}</h3>
-        <p>${props.price.toFixed(2)}</p>
+        <p>${formatCurrency(props.price)}</p>
     </div>
   );
 }

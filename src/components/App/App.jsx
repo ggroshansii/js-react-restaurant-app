@@ -4,7 +4,8 @@ import NavBar from "../NavBar/NavBar";
 import Home from "../Home/Home";
 import Menu from "../Menu/Menu";
 import OrderSubmit from "../OrderSubmit/OrderSubmit";
-import MenuUtility from "../../utility.json";
+import MenuUtility from "../../MenuUtility.json";
+import formatCurrency from "../../FormatUtility"
 import { useState, useEffect, useRef } from "react";
 
 function App() {
@@ -20,15 +21,11 @@ function App() {
             firstRender.current = false;
         } else {
             let total = (orderItems.reduce((accum, element) => {
-                return accum + element.price;
-            }, 0).toFixed(2));
-            console.log(typeof total, total)
-            let tax = ((total * 0.07).toFixed(2));
-            console.log(tax)
-            setOrderTax(Number(tax));
-            console.log(typeof orderTax, orderTax)
-
-            setOrderTotal((Number(total) + Number(orderTax)).toFixed(2)) ;
+                return accum + (element.price)
+            }, 0));
+            let tax = total * 0.07;
+            setOrderTax(formatCurrency(tax));
+            setOrderTotal(formatCurrency(total + tax))
         }
     }, [orderItems]);
 
