@@ -1,6 +1,7 @@
 
 import './MenuItemList.css';
-import MenuItem from '../MenuItem/MenuItem'
+import MenuItem from '../MenuItem/MenuItem';
+import { v4 as uuidv4 } from 'uuid';
 
 function MenuItemList(props) {
   return (
@@ -9,7 +10,7 @@ function MenuItemList(props) {
     <div className="menu-list">
     {console.log(props.MenuUtility)}
       {props.MenuUtility.menu.map(element => {
-          return <MenuItem key={element.id} {...element} addToOrder={props.addToOrder}/>
+          return <MenuItem key={ uuidv4() } {...element} addToOrder={props.addToOrder}/>
       })}
     </div>
     </div>

@@ -1,17 +1,19 @@
 import "./OrderItemList.css";
 import OrderItem from "../OrderItem/OrderItem";
 
+import { v4 as uuidv4 } from 'uuid';
+
 function OrderItemList(props) {
     return (
         <div className="order-list-container">
             <h2>Order:</h2>
             {props.orderItems.map((element) => {
-                return <OrderItem key={element.id} {...element} />;
+                return <OrderItem key={ uuidv4() } {...element} />;
             })}
             <div className="total-continue-container">
                 <div className="total">
                     <h3>Total:</h3>
-                    <p>$10.53</p>
+                    <p>${props.orderTotal.toFixed(2)}</p>
                 </div>
                 <div className="continue-button-container">
                   <button type="submit">Continue with Order</button>
