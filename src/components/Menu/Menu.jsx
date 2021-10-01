@@ -10,7 +10,7 @@ function Menu(props) {
   return (
     <div className="menu-container">
         <MenuItemList MenuUtility={props.MenuUtility} addToOrder={props.addToOrder} />
-        <OrderItemList orderItems={props.orderItems} orderTotal={props.orderTotal}/>
+        <OrderItemList orderItems={props.orderItems} orderTotal={props.orderTotal} changeNavSelection={props.changeNavSelection} />
     </div>
   );
 }

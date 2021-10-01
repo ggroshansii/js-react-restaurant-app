@@ -11,8 +11,6 @@ import { useState, useEffect, useRef } from 'react'
 function App() {
 
 const [navSelection, setNavSelection] = useState('home');
-
-
 const [orderItems, setOrderItems] = useState([]);
 const [orderTotal, setOrderTotal] = useState(0);
 //add a tax state
@@ -45,10 +43,10 @@ switch (navSelection) {
     html = <Home />;
     break;
   case 'menu':
-    html = <Menu MenuUtility={MenuUtility} addToOrder={addToOrder} orderItems={orderItems} orderTotal={orderTotal}/>;
+    html = <Menu MenuUtility={MenuUtility} addToOrder={addToOrder} orderItems={orderItems} orderTotal={orderTotal} changeNavSelection={changeNavSelection}/>;
     break;
   case 'order':
-    html = <OrderSubmit />
+    html = <OrderSubmit orderItems={orderItems} orderTotal={orderTotal}/>
     break;
   default:
     console.log("ERROR IN SWITCH");
