@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 function OrderItemList(props) {
     return (
         <div className="order-list-container">
+            <div className="order">
             <h2>Order:</h2>
             {props.orderItems.map((element) => {
                 return <OrderItem key={ uuidv4() } {...element} />;
@@ -19,6 +20,8 @@ function OrderItemList(props) {
                   <button type="submit">Continue with Order</button>
                 </div>
             </div>
+            </div>
+
         </div>
     );
 }

@@ -3,6 +3,11 @@
     width: 50%;
 }
 
+.order {
+    position: sticky;
+    top: 0px;
+}
+
 .total-continue-container {
     display: flex;
     flex-direction: column;
