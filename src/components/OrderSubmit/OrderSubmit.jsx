@@ -4,11 +4,6 @@ import { useState } from "react";
 function OrderSubmit(props) {
     const [fullName, setFullName] = useState("");
 
-    let orderSummary = props.orderItems;
-    let orderTotal = props.orderTotal;
-
-    console.log(orderSummary, orderTotal);
-
     function handleChange(event) {
         setFullName(event.target.value);
     }
@@ -20,7 +15,7 @@ function OrderSubmit(props) {
                 {props.orderItems.map((element) => {
                     return (
                         <>
-                            <div class="order-item">
+                            <div class="order-item-final">
                                 <p>{element.name}</p>
                                 <p>
                                     <strong>${element.price.toFixed(2)}</strong>
@@ -31,7 +26,7 @@ function OrderSubmit(props) {
                 })}
             </div>
 
-            <div className="total">
+            <div className="total-final">
                 <h2>Total:</h2>
                 <p><strong>${props.orderTotal.toFixed(2)}</strong></p>
             </div>
@@ -45,7 +40,7 @@ function OrderSubmit(props) {
                     value={fullName}
                     onChange={handleChange}
                 />
-                <button type="submit" id="submit-order" >Submit Order</button>
+                <button type="submit" id="submit-order" onClick={() => props.submitOrder(fullName)} >Submit Order</button>
             </div>
         </div>
     );

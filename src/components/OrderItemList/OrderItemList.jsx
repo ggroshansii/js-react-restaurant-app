@@ -13,8 +13,10 @@ function OrderItemList(props) {
             })}
             <div className="total-continue-container">
                 <div className="total">
+                    <h3>Tax:</h3>
+                    <p>${props.orderTax}</p>
                     <h3>Total:</h3>
-                    <p>${props.orderTotal.toFixed(2)}</p>
+                    <p>${props.orderTotal}</p>
                 </div>
                 <div className="continue-button-container">
                   <button type="submit" value="order" onClick={(event) => {props.changeNavSelection(event.target.value)}}>Continue with Order</button>
