@@ -19,6 +19,7 @@
 
 .total-final {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
@@ -36,7 +37,13 @@
 
 .total-final p {
     color: green;
-    vertical-align: bottom;
+}
+
+.tax-total-final {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .submit {

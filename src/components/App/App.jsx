@@ -3,6 +3,8 @@ import Logo from "../Logo/Logo";
 import NavBar from "../NavBar/NavBar";
 import Home from "../Home/Home";
 import Menu from "../Menu/Menu";
+import AboutUs from "../AboutUs/AboutUs";
+import ContactUs from "../ContactUs/ContactUs";
 import OrderSubmit from "../OrderSubmit/OrderSubmit";
 import MenuUtility from "../../MenuUtility.json";
 import formatCurrency from "../../FormatUtility"
@@ -39,6 +41,7 @@ function App() {
             name: firstName,
             order: orderItems,
             total: orderTotal,
+            tax: orderTax,
         };
         const response = await fetch(
             "https://tiny-taco-server.herokuapp.com/yomamaspizza/",
@@ -64,8 +67,8 @@ function App() {
                     MenuUtility={MenuUtility}
                     addToOrder={addToOrder}
                     orderItems={orderItems}
-                    orderTotal={orderTotal}
                     orderTax={orderTax}
+                    orderTotal={orderTotal}
                     changeNavSelection={changeNavSelection}
                 />
             );
@@ -74,10 +77,17 @@ function App() {
             html = (
                 <OrderSubmit
                     orderItems={orderItems}
+                    orderTax={orderTax}
                     orderTotal={orderTotal}
                     submitOrder={submitOrder}
                 />
             );
+            break;
+          case 'aboutus':
+            html = <AboutUs />
+            break;
+          case "contactus":
+            html = <ContactUs />
             break;
         default:
             console.log("ERROR IN SWITCH");
