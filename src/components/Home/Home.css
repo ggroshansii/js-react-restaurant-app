@@ -1,0 +1,9 @@
+
+
+.home-container {
+    height: 65vh;
+    width: 100%;
+    background-image: url('../../images/pizza-background.jpeg');
+    background-size:cover;
+    background-repeat: no-repeat;
+}

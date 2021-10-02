@@ -1,4 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .menu-list-container {
     width: 50%;
+
 }
+
+.menu-list-container h2 {
+    color: white;
+    font-family: 'lobster', cursive;
+    font-size: 3rem;
+}
+
+.menu-list {
+    overflow: scroll;
+    height: 60rem;
+    direction: rtl;
+}
+

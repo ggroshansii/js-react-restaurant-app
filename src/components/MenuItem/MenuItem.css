@@ -1,6 +1,25 @@
 
 .menu-item-container {
-    border: 1px solid black;
+    border: 3px solid white;
     margin: 1rem auto;
     padding: 1rem;
+    width: 550px;
+    color: white;
+    background-color: #B63D5F;
+
+}
+
+.menu-button {
+    border: 2px solid white;
+    color:  white;
+    font-weight: 700;
+    padding: 0.65rem 1.15rem;
+    background-color:  #B63D5F;
+    transition: color 1s, background-color 1s;
+}
+
+.menu-button:hover {
+    color:  #B63D5F;;
+    background-color: white;
+
 }

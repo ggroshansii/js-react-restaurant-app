@@ -17,7 +17,6 @@ function NavBar(props) {
         <button value="contact" name='contact'>Contact</button> */}
 
       </div>
-    This is the NavBar
     </div>
   );
 }

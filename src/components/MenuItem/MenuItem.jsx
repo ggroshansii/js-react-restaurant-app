@@ -11,7 +11,7 @@ function MenuItem(props) {
         <h4>{props.desc}</h4>
         <p>{props.ingredients.join(", ")}</p>
         <p>${formatCurrency(props.price)}</p>
-        <button value={JSON.stringify(props)} onClick={(event) => props.addToOrder(event)}>Add to Order</button>
+        <button class="menu-button" value={JSON.stringify(props)} onClick={(event) => props.addToOrder(event)}>Add to Order</button>
     </div>
   );
 }
