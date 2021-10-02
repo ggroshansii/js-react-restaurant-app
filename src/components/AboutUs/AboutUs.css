@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.aboutus-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    width: 100%;
+    background-image: url("../../images/aboutus-background.jpeg");
+    background-position: 50% 50%;
+}
+
+.aboutus-blurb {
+    width: 30%;
+    background-color: white;
+    padding: 0rem 1rem 0.5rem 1rem;
+    border: 10px solid #B63D5F;
+
+}
+
+.aboutus-blurb h2 {
+    color: #B63D5F;   
+    font-size: 1.75rem;
+    font-family: 'lobster', cursive;
+}
+
+.aboutus-blurb p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.75rem;
+}
