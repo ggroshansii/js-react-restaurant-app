@@ -1,10 +1,13 @@
 
 import './Logo.css';
+import logo from '../../images/logo.png'
 
 function Logo() {
   return (
-    <div>
-    This is the logo.
+    <div className="logo-container">
+    {console.log(logo)}
+          <img src={logo} />
+          
     </div>
   );
 }
