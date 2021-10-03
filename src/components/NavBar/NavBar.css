@@ -3,7 +3,7 @@
 .nav-container {
     width: 100%;
     background-color: #B63D5F;
-    height: 3rem;
+    height: 7vh;
 }
 
 .nav-container button {
@@ -11,7 +11,7 @@
     background-color: #B63D5F;
     padding: 0;
     margin: 0;
-    height: 3rem;
+    height: 7vh;
     padding: 0 1rem;
     width: 10rem;
     border: none;

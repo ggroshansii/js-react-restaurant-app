@@ -5,6 +5,7 @@ import Home from "../Home/Home";
 import Menu from "../Menu/Menu";
 import AboutUs from "../AboutUs/AboutUs";
 import ContactUs from "../ContactUs/ContactUs";
+import Footer from "../Footer/Footer";
 import OrderSubmit from "../OrderSubmit/OrderSubmit";
 import MenuUtility from "../../MenuUtility.json";
 import formatCurrency from "../../FormatUtility"
@@ -103,6 +104,7 @@ function App() {
             <Logo />
             <NavBar changeNavSelection={changeNavSelection} />
             {html}
+            <Footer/>
         </div>
     );
 }

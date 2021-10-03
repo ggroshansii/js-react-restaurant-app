@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 3rem;
 }
 .order-list-container h2 {
     color: white;
@@ -31,6 +32,12 @@
     padding: 0rem 1rem;
 }
 
+.total-continue-container h3 {
+    font-family: "lobster";
+    font-size: 1.5rem;
+    margin: 0;
+}
+
 
 .total-tax, .total-amount {
     display: flex;
@@ -48,3 +55,18 @@
     margin-top: 1rem;
 }
 
+.continue-order-button {
+    background-color: white;
+    border: 2px solid #B63D5F;
+    color: #B63D5F;
+    width: 175px;
+    padding: 0.25rem;
+    font-family: "open sans", sans-serif;
+    transition: all 0.5s;
+}
+
+.continue-order-button:hover {
+    color: white;
+    background-color: #B63D5F;
+    letter-spacing: 1px;
+}

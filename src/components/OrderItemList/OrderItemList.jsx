@@ -25,6 +25,7 @@ function OrderItemList(props) {
                 
                     <div className="continue-button-container">
                         <button
+                        class = "continue-order-button"
                             type="submit"
                             value="order"
                             onClick={(event) => {
