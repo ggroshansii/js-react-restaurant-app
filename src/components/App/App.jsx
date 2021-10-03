@@ -15,7 +15,7 @@ function App() {
     const [navSelection, setNavSelection] = useState("home");
     const [orderItems, setOrderItems] = useState([]);
     const [orderTotal, setOrderTotal] = useState(0);
-    const [orderTax, setOrderTax] = useState("");
+    const [orderTax, setOrderTax] = useState(0);
 
     const firstRender = useRef(true);
 

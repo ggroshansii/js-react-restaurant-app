@@ -24,4 +24,8 @@
 
 .contact-card h2 {
     font-family: 'lobster', sans-serif;
+    color: #B63D5F;
+}
+.contact-card a{
+    font-weight: 700;
 }

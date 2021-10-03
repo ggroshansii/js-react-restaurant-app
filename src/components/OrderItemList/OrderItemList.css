@@ -14,8 +14,8 @@
 
 
 .order {
-    /* position: sticky;
-    top: 40px; */
+    position: sticky;
+    top: 40px;
     margin-top: 0.95rem;
     background-color: white;
     color: #B63D5F;

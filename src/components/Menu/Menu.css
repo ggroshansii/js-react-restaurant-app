@@ -1,7 +1,7 @@
 
 .menu-container{
     display: flex;
-    background-image: url("../../images/menu-background.jpeg");
+    background-image: url("../../images/menu-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
