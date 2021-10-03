@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+.contactus-container {
+    background-image: url("../../images/contactus-background.jpeg");
+    height: 71vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 75% 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card {
+    width: 200px;
+    background-color: white;
+    padding: 0rem 1rem 1rem 1rem;
+    border: 10px solid #B63D5F;
+    font-family: 'open sans', sans-serif;
+
+}
+
+.contact-card h2 {
+    font-family: 'lobster', sans-serif;
+}

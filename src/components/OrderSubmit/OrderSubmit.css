@@ -1,8 +1,45 @@
 
 .order-submit-container {
-    width: 50%;
+    background-image: url("../../images/submit-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-submit-card{
+    width: 30%;
+    height: 300px;
+    overflow: scroll;
     text-align: left;
-    margin:3rem auto;
+    background-color: white;
+    padding: 0rem 1rem 0.5rem 1rem;
+    border: 10px solid #B63D5F;
+}
+
+.order-submit-card h2 {
+    color: #B63D5F;
+    font-family: 'lobster', cursive;
+
+}
+
+.order-submit-card button {
+    background-color: white;
+    border: 2px solid #B63D5F;
+    color: #B63D5F;
+    padding: 0.25rem 0.5rem;
+    font-family: "open sans", sans-serif;
+    transition: all 0.5s;
+
+}
+
+.order-submit-card button:hover {
+    color: white;
+    background-color: #B63D5F;
+    letter-spacing: 1px;
+
 }
 
 .order-item-list {
@@ -14,14 +51,12 @@
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin: 0.75rem 0rem;
 }
 
 .total-final {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -41,14 +76,16 @@
 
 .tax-total-final {
     display: flex;
-    width: 100%;
-    justify-content: flex-end;
+    width: 150px;
+    justify-content: space-between;
     align-items: center;
 }
 
 .submit {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 #full-name {
