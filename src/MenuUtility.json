@@ -1,21 +1,21 @@
 {
     "menu": [
         {
-            "name": "Spicy Buffalo Garlic Knots ",
+            "name": "Blueberry and Treacle Cookies",
             "ingredients": [
-                "garlic",
-                "buffalo sauce",
-                "sugar",
+                "blueberry",
+                "treacle",
                 "flour",
-                "yeast",
+                "butter",
                 "water",
                 "salt",
-                "oil",
-                "cheese"
+                "egg",
+                "powdered sugar"
             ],
-            "desc": "Freshly baked garlic bread smoothered with buffalo and hot sauce",
-            "price": 750,
-            "type": "appetizer"
+            "desc": "Crunchy cookies made with fresh blueberry and dark treacle",
+            "price": 499,
+            "typeName": "dessert",
+            "typeID": 3
         },
         {
             "name": "Goat Cheesy Cinnamon Breadsticks",
@@ -32,7 +32,8 @@
             ],
             "desc": "Moist, indulgent breadsticks filled with goat cheese and topped with cinnamon",
             "price": 675,
-            "type": "appetizer"
+            "typeName": "appetizer",
+            "typeID": 1
         },
         {
             "name": "Tuna and thyme pizza",
@@ -49,7 +50,8 @@
             ],
             "desc": "Thin and crispy pizza topped with tuna and fresh thyme",
             "price": 1149,
-            "type": "pizza"
+            "typeName": "pizza",
+            "typeID": 2
         },
         {
             "name": "Honey and Mango Pizza",
@@ -66,7 +68,8 @@
             ],
             "desc": "Deep pan pizza topped with clear honey and dried mango",
             "price": 1199,
-            "type": "pizza"
+            "typeName": "pizza",
+            "typeID": 2
         },
         {
             "name": "Chilli and Apple Pizza",
@@ -83,7 +86,8 @@
             ],
             "desc": "Thin and crispy pizza topped with hot chilli and dessert apple",
             "price": 1079,
-            "type": "pizza"
+            "typeName": "pizza",
+            "typeID": 2
         },
         {
             "name": "Egg, Pepperoni and Pineapple pizza",
@@ -101,24 +105,10 @@
             ],
             "desc": "Crispy pizza topped with free range eggs, pepperoni and freshly cut pineapple",
             "price": 1050,
-            "type": "pizza"
+            "typeName": "pizza",
+            "typeID": 2
         },
-        {
-            "name": "Blueberry and Treacle Cookies",
-            "ingredients": [
-                "blueberry",
-                "treacle",
-                "flour",
-                "butter",
-                "water",
-                "salt",
-                "egg",
-                "powdered sugar"
-            ],
-            "desc": "Crunchy cookies made with fresh blueberry and dark treacle",
-            "price": 499,
-            "type": "dessert"
-        },
+
         {
             "name": "Raspberry Honey Oreo Cheesecake",
             "ingredients": [
@@ -132,7 +122,26 @@
             ],
             "desc": "A velvety cheesecake layered with oreo chocolate and fresh raspberry",
             "price": 599,
-            "type": "dessert"
+            "type": "dessert",
+            "typeID": 3
+        },
+        {
+            "name": "Spicy Buffalo Garlic Knots ",
+            "ingredients": [
+                "garlic",
+                "buffalo sauce",
+                "sugar",
+                "flour",
+                "yeast",
+                "water",
+                "salt",
+                "oil",
+                "cheese"
+            ],
+            "desc": "Freshly baked garlic bread smoothered with buffalo and hot sauce",
+            "price": 750,
+            "typeName": "appetizer",
+            "typeID": 1
         }
     ]
 }

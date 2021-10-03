@@ -13,8 +13,7 @@ function NavBar(props) {
         <button value="menu" name='menu' onClick={() => props.changeNavSelection('menu')}>MENU</button>
         <button value='aboutus' name='aboutus' onClick={() => props.changeNavSelection('aboutus')}>ABOUT US</button>
         <button value="contactus" name='contactus' onClick={() => props.changeNavSelection('contactus')}>CONTACT US</button>
-        {/* <button value="aboutus" name='aboutus'>About Us</button>
-        <button value="contact" name='contact'>Contact</button> */}
+        <button id="admin-btn" value="adminview" name='adminview' onClick={() => props.changeNavSelection('adminview')}>ADMIN VIEW</button>
 
       </div>
     </div>

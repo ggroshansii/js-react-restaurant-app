@@ -4,6 +4,8 @@
     width: 100%;
     background-color: #B63D5F;
     height: 7vh;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-container button {
@@ -23,4 +25,10 @@
 .nav-container button:hover {
     background-color: white;
     color: #B63D5F;
+}
+
+
+#admin-btn {
+    position: absolute;
+    right: 0;
 }

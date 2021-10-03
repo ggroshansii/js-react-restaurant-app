@@ -8,7 +8,6 @@ function MenuItemList(props) {
     <div className="menu-list-container">
     <h2>Menu:</h2>
     <div className="menu-list">
-    {console.log(props.MenuUtility)}
       {props.MenuUtility.menu.map(element => {
           return <MenuItem key={ uuidv4() } {...element} addToOrder={props.addToOrder}/>
       })}
