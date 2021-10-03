@@ -1,2 +1,0 @@
-(this["webpackJsonpjs-react-restaurant-app"]=this["webpackJsonpjs-react-restaurant-app"]||[]).push([[0],{11:function(t,e,n){"use strict";n.r(e);var r=n(1),a=n.n(r),c=n(3),s=n.n(c),p=(n(8),n(9),n(0));var i=function(){return Object(p.jsx)("div",{className:"App"})};s.a.render(Object(p.jsx)(a.a.StrictMode,{children:Object(p.jsx)(i,{})}),document.getElementById("root"))},8:function(t,e,n){},9:function(t,e,n){}},[[11,1,2]]]);
-//# sourceMappingURL=main.44ea6938.chunk.js.map
