@@ -48,6 +48,7 @@ function App() {
             order: orderItems,
             total: orderTotal,
             tax: orderTax,
+            isCompleted: false,
         };
         const response = await fetch(
             "https://tiny-taco-server.herokuapp.com/yomamas/",
