@@ -20,7 +20,7 @@ function AdminView(props) {
                             <p>
                                 Total: <strong>{element.total}</strong>
                             </p>
-                            <input type="checkbox" id="completed" name="is-completed" value="completed" />
+                            <input type="checkbox" id="completed" name="is-completed" value="completed" checked={element.isCompleted}/>
                             <label for="completed">Completed</label>
                         </div>
                     </>
