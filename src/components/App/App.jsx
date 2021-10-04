@@ -5,6 +5,7 @@ import Home from "../Home/Home";
 import Menu from "../Menu/Menu";
 import AboutUs from "../AboutUs/AboutUs";
 import ContactUs from "../ContactUs/ContactUs";
+import AdminView from "../AdminView/AdminView";
 import Footer from "../Footer/Footer";
 import OrderSubmit from "../OrderSubmit/OrderSubmit";
 import MenuUtility from "../../MenuUtility.json";
@@ -16,10 +17,12 @@ function App() {
     const [orderItems, setOrderItems] = useState([]);
     const [orderTotal, setOrderTotal] = useState(0);
     const [orderTax, setOrderTax] = useState(0);
+    const [adminOrders, setAdminOrders] = useState([]);
 
     const firstRender = useRef(true);
 
     useEffect(() => {
+        getOrders();
         if (firstRender.current) {
             firstRender.current = false;
         } else {
@@ -45,7 +48,7 @@ function App() {
             tax: orderTax,
         };
         const response = await fetch(
-            "https://tiny-taco-server.herokuapp.com/yomamaspizza/",
+            "https://tiny-taco-server.herokuapp.com/yomamas/",
             {
                 method: "POST",
                 headers: {
@@ -56,6 +59,13 @@ function App() {
         );
         return response.json();
     }
+
+  function getOrders() {
+        fetch("https://tiny-taco-server.herokuapp.com/yomamas/")
+            .then((response) => response.json())
+            .then((data) => setAdminOrders(data));
+    }
+
 
     let html;
     switch (navSelection) {
@@ -89,6 +99,9 @@ function App() {
             break;
           case "contactus":
             html = <ContactUs />
+            break;
+          case "adminview":
+            html = <AdminView adminOrders={adminOrders}/>
             break;
         default:
             console.log("ERROR IN SWITCH");
