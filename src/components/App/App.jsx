@@ -9,7 +9,7 @@ import AdminView from "../AdminView/AdminView";
 import Footer from "../Footer/Footer";
 import OrderSubmit from "../OrderSubmit/OrderSubmit";
 import MenuUtility from "../../MenuUtility.json";
-import formatCurrency from "../../FormatUtility"
+import formatCurrency from "../../FormatUtility";
 import { useState, useEffect, useRef } from "react";
 
 function App() {
@@ -21,19 +21,19 @@ function App() {
 
     const firstRender = useRef(true);
 
-    console.log("ADMIN ORDERS", adminOrders)
+    console.log("ADMIN ORDERS", adminOrders);
 
     useEffect(() => {
         getOrders();
         if (firstRender.current) {
             firstRender.current = false;
         } else {
-            let total = (orderItems.reduce((accum, element) => {
-                return accum + (element.price)
-            }, 0));
+            let total = orderItems.reduce((accum, element) => {
+                return accum + element.price;
+            }, 0);
             let tax = total * 0.07;
             setOrderTax(formatCurrency(tax));
-            setOrderTotal(formatCurrency(total + tax))
+            setOrderTotal(formatCurrency(total + tax));
         }
     }, [orderItems]);
 
@@ -63,14 +63,45 @@ function App() {
         return response.json();
     }
 
-  function getOrders() {
+    function getOrders() {
         fetch("https://tiny-taco-server.herokuapp.com/yomamas/")
             .then((response) => response.json())
             .then((data) => setAdminOrders(data));
     }
 
+    // async function rePostOrders(){
+    //     adminOrders.forEach(element => {
+    //         const response = await fetch(
+    //             `https://tiny-taco-server.herokuapp.com/yomamas/${element}`,
+    //             {
+    //                 method: "POST",
+    //                 headers: {
+    //                     "Content-Type": "application/json",
+    //                 },
+    //                 body: JSON.stringify(adminOrders),
+    //             }
+    //         );
+    //     })
 
+    // }
 
+    function deleteOrderAdmin(id) {
+        let index = adminOrders.findIndex((element) => element.id === id);
+        let revisedOrders = [...adminOrders];
+        revisedOrders.splice(index, 1);
+
+        fetch(`https://tiny-taco-server.herokuapp.com/yomamas/${id}`, {
+            method: "DELETE",
+        }).then((response) => {
+            console.log(response);
+            if (!response.ok) {
+                throw new Error("Ooops! Something went wrong"); // This is because a 404 does not constitute a network error
+            }
+            console.log("Record was deleted!!");
+        });
+
+        getOrders();
+    }
 
     let html;
     switch (navSelection) {
@@ -99,14 +130,19 @@ function App() {
                 />
             );
             break;
-          case 'aboutus':
-            html = <AboutUs />
+        case "aboutus":
+            html = <AboutUs />;
             break;
-          case "contactus":
-            html = <ContactUs />
+        case "contactus":
+            html = <ContactUs />;
             break;
-          case "adminview":
-            html = <AdminView adminOrders={adminOrders}/>
+        case "adminview":
+            html = (
+                <AdminView
+                    adminOrders={adminOrders}
+                    deleteOrderAdmin={deleteOrderAdmin}
+                />
+            );
             break;
         default:
             console.log("ERROR IN SWITCH");
@@ -122,7 +158,7 @@ function App() {
             <Logo />
             <NavBar changeNavSelection={changeNavSelection} />
             {html}
-            <Footer/>
+            <Footer />
         </div>
     );
 }
