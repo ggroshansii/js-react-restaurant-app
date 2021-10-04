@@ -1,5 +1,7 @@
 
-
+h1{ 
+    margin-top: 3rem;
+}
 .admin-order-card {
     border: 5px solid #B63D5F;;
     width: 50%;
@@ -11,4 +13,17 @@
     position: relative;
     list-style-type: none;
     right: 20px;
+}
+
+.admin-view-inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-view-inputs-container button {
+    width: 100px;
+    margin: 0.75rem 0rem;
+    padding: 0.25rem 0.5rem;
 }

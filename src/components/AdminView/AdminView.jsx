@@ -3,8 +3,8 @@ import "./AdminView.css";
 function AdminView(props) {
     return (
         <div class="admin-order-container">
-            <h2>Current Orders: </h2>
-            <button>Deleted Completed Orders</button>
+            <h1>Current Orders: </h1>
+
             {props.adminOrders.map((element) => {
                 return (
                     <>
@@ -20,8 +20,21 @@ function AdminView(props) {
                             <p>
                                 Total: <strong>{element.total}</strong>
                             </p>
-                            <input type="checkbox" id="completed" name="is-completed" value="completed" checked={element.isCompleted}/>
-                            <label for="completed">Completed</label>
+                            <div className="admin-view-inputs-container">
+                            <div className="admin-view-checkbox">
+                            <input
+                                type="checkbox"
+                                id="completed"
+                                name="is-completed"
+                                value="completed"
+                                checked={element.isCompleted}
+                            />
+                              <label for="completed">Completed</label>
+                            </div>
+
+                            <button>Delete Order</button>
+                            </div>
+
                         </div>
                     </>
                 );

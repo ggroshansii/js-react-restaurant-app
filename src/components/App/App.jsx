@@ -70,6 +70,8 @@ function App() {
     }
 
 
+
+
     let html;
     switch (navSelection) {
         case "home":
