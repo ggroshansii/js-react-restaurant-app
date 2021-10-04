@@ -21,6 +21,8 @@ function App() {
 
     const firstRender = useRef(true);
 
+    console.log("ADMIN ORDERS", adminOrders)
+
     useEffect(() => {
         getOrders();
         if (firstRender.current) {

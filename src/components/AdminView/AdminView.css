@@ -1,0 +1,14 @@
+
+
+.admin-order-card {
+    border: 5px solid #B63D5F;;
+    width: 50%;
+    margin: 3rem auto;
+    padding: 1rem
+}
+
+.admin-order-card li {
+    position: relative;
+    list-style-type: none;
+    right: 20px;
+}

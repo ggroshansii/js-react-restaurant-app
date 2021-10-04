@@ -15,7 +15,8 @@
             ],
             "desc": "Freshly baked garlic bread smoothered with buffalo and hot sauce",
             "price": 750,
-            "type": "appetizer"
+            "type": "appetizer",
+            "isComplete": false
         },
         {
             "name": "Goat Cheesy Cinnamon Breadsticks",
@@ -32,7 +33,8 @@
             ],
             "desc": "Moist, indulgent breadsticks filled with goat cheese and topped with cinnamon",
             "price": 675,
-            "type": "appetizer"
+            "type": "appetizer",
+            "isComplete": false
         },
         {
             "name": "Tuna and thyme pizza",
@@ -49,7 +51,8 @@
             ],
             "desc": "Thin and crispy pizza topped with tuna and fresh thyme",
             "price": 1149,
-            "type": "pizza"
+            "type": "pizza",
+            "isComplete": false
         },
         {
             "name": "Honey and Mango Pizza",
@@ -66,7 +69,8 @@
             ],
             "desc": "Deep pan pizza topped with clear honey and dried mango",
             "price": 1199,
-            "type": "pizza"
+            "type": "pizza",
+            "isComplete": false
         },
         {
             "name": "Chilli and Apple Pizza",
@@ -83,7 +87,8 @@
             ],
             "desc": "Thin and crispy pizza topped with hot chilli and dessert apple",
             "price": 1079,
-            "type": "pizza"
+            "type": "pizza",
+            "isComplete": false
         },
         {
             "name": "Egg, Pepperoni and Pineapple pizza",
@@ -101,7 +106,8 @@
             ],
             "desc": "Crispy pizza topped with free range eggs, pepperoni and freshly cut pineapple",
             "price": 1050,
-            "type": "pizza"
+            "type": "pizza",
+            "isComplete": false
         },
         {
             "name": "Blueberry and Treacle Cookies",
@@ -117,7 +123,8 @@
             ],
             "desc": "Crunchy cookies made with fresh blueberry and dark treacle",
             "price": 499,
-            "type": "dessert"
+            "type": "dessert",
+            "isComplete": false
         },
         {
             "name": "Raspberry Honey Oreo Cheesecake",
@@ -132,7 +139,8 @@
             ],
             "desc": "A velvety cheesecake layered with oreo chocolate and fresh raspberry",
             "price": 599,
-            "type": "dessert"
+            "type": "dessert",
+            "isComplete": false
         }
     ]
 }
