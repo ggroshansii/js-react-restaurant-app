@@ -1,3 +1,11 @@
+/*
+
+Notes: Left off where the orders in admin view get deleted when delete button is clicked; however, the admin view display orders are not automatically 'refreshing' after the deletion.
+
+*/
+
+
+
 import "./App.css";
 import Logo from "../Logo/Logo";
 import NavBar from "../NavBar/NavBar";
