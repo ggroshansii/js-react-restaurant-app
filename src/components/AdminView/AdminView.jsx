@@ -9,7 +9,7 @@ function AdminView(props) {
             <h1>Current Orders: </h1>
 
             {props.adminOrders.map((item) => {
-                return <AdminItem {...item} />;
+                return <AdminItem {...item} deleteOrderAdmin={props.deleteOrderAdmin}/>;
             })}
         </div>
     );

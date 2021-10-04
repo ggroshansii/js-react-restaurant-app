@@ -69,21 +69,6 @@ function App() {
             .then((data) => setAdminOrders(data));
     }
 
-    // async function rePostOrders(){
-    //     adminOrders.forEach(element => {
-    //         const response = await fetch(
-    //             `https://tiny-taco-server.herokuapp.com/yomamas/${element}`,
-    //             {
-    //                 method: "POST",
-    //                 headers: {
-    //                     "Content-Type": "application/json",
-    //                 },
-    //                 body: JSON.stringify(adminOrders),
-    //             }
-    //         );
-    //     })
-
-    // }
 
     function deleteOrderAdmin(id) {
         let index = adminOrders.findIndex((element) => element.id === id);

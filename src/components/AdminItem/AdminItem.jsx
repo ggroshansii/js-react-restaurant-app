@@ -35,7 +35,6 @@ function AdminItem(props) {
                     </button>
                 </div>
             </div>
-            );
         </>
     );
 }
