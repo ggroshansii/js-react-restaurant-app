@@ -64,7 +64,7 @@ async function grabMenu() {
     async function submitOrder(firstName = "anonymous") {
         let finalOrder = {
             name: firstName,
-            order: orderItems,
+            order: orderItems.map(item => item.name),
             total: orderTotal,
             tax: orderTax,
             isCompleted: false,
