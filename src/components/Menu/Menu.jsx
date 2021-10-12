@@ -8,7 +8,7 @@ function Menu(props) {
 
   return (
     <div className="menu-container">
-        <MenuItemList MenuUtility={props.MenuUtility} addToOrder={props.addToOrder} />
+        <MenuItemList addToOrder={props.addToOrder} menu={props.menu} />
         <OrderItemList orderItems={props.orderItems} orderTotal={props.orderTotal} orderTax={props.orderTax} changeNavSelection={props.changeNavSelection} />
     </div>
   );

@@ -16,7 +16,6 @@ import ContactUs from "../ContactUs/ContactUs";
 import AdminView from "../AdminView/AdminView";
 import Footer from "../Footer/Footer";
 import OrderSubmit from "../OrderSubmit/OrderSubmit";
-import MenuUtility from "../../MenuUtility.json";
 import formatCurrency from "../../FormatUtility";
 import { useState, useEffect, useRef } from "react";
 
@@ -25,6 +24,7 @@ function App() {
     const [orderItems, setOrderItems] = useState([]);
     const [orderTotal, setOrderTotal] = useState(0);
     const [orderTax, setOrderTax] = useState(0);
+    const [menu, setMenu] = useState();
     const [adminOrders, setAdminOrders] = useState([]);
 
     const firstRender = useRef(true);
@@ -32,7 +32,6 @@ function App() {
     console.log("ADMIN ORDERS", adminOrders);
 
     useEffect(() => {
-        getOrders();
         if (firstRender.current) {
             firstRender.current = false;
         } else {
@@ -45,10 +44,22 @@ function App() {
         }
     }, [orderItems]);
 
+    useEffect(() => {
+        grabMenu()
+    }, []) 
+
     function addToOrder(event) {
         setOrderItems([...orderItems, JSON.parse(event.target.value)]);
         console.log("ORDER ITEMS:", orderItems);
     }
+
+async function grabMenu() {
+    await fetch('https://django-rest-restaurant-api.herokuapp.com/api_v1/')
+    .then(response => response.json())
+    .then(data => setMenu(data));
+}
+
+
 
     async function submitOrder(firstName = "anonymous") {
         let finalOrder = {
@@ -71,30 +82,30 @@ function App() {
         return response.json();
     }
 
-    function getOrders() {
-        fetch("https://tiny-taco-server.herokuapp.com/yomamas/")
-            .then((response) => response.json())
-            .then((data) => setAdminOrders(data));
-    }
+    // function getOrders() {
+    //     fetch("https://tiny-taco-server.herokuapp.com/yomamas/")
+    //         .then((response) => response.json())
+    //         .then((data) => setAdminOrders(data));
+    // }
 
 
-    function deleteOrderAdmin(id) {
-        let index = adminOrders.findIndex((element) => element.id === id);
-        let revisedOrders = [...adminOrders];
-        revisedOrders.splice(index, 1);
+    // function deleteOrderAdmin(id) {
+    //     let index = adminOrders.findIndex((element) => element.id === id);
+    //     let revisedOrders = [...adminOrders];
+    //     revisedOrders.splice(index, 1);
 
-        fetch(`https://tiny-taco-server.herokuapp.com/yomamas/${id}`, {
-            method: "DELETE",
-        }).then((response) => {
-            console.log(response);
-            if (!response.ok) {
-                throw new Error("Ooops! Something went wrong"); // This is because a 404 does not constitute a network error
-            }
-            console.log("Record was deleted!!");
-        });
+    //     fetch(`https://tiny-taco-server.herokuapp.com/yomamas/${id}`, {
+    //         method: "DELETE",
+    //     }).then((response) => {
+    //         console.log(response);
+    //         if (!response.ok) {
+    //             throw new Error("Ooops! Something went wrong"); // This is because a 404 does not constitute a network error
+    //         }
+    //         console.log("Record was deleted!!");
+    //     });
 
-        getOrders();
-    }
+    //     getOrders();
+    // }
 
     let html;
     switch (navSelection) {
@@ -104,7 +115,7 @@ function App() {
         case "menu":
             html = (
                 <Menu
-                    MenuUtility={MenuUtility}
+                    menu={menu}
                     addToOrder={addToOrder}
                     orderItems={orderItems}
                     orderTax={orderTax}
@@ -133,7 +144,6 @@ function App() {
             html = (
                 <AdminView
                     adminOrders={adminOrders}
-                    deleteOrderAdmin={deleteOrderAdmin}
                 />
             );
             break;
